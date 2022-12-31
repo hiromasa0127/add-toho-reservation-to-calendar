@@ -17,8 +17,8 @@ function createTohoEventFromGmail(){
       // 情報を取得
       var id = body.match(/購入番号\D*(\d{4}).*/)[1];
       var date = body.match(/上映日\D*(\d+\/\d+\/\d+)/)[1];
-      var time_from = body.match(/時間\D*(\d+:\d+)～(\d+:\d+)/)[1];
-      var time_to = body.match(/時間\D*(\d+:\d+)～(\d+:\d+)/)[2];
+      var time_from = body.match(/時間　(\d+:\d+)〜(\d+:\d+)/)[1];
+      var time_to = body.match(/時間　(\d+:\d+)〜(\d+:\d+)/)[2];
       var theater = body.match(/映画館　(.*)(\n|\r)/)[1];
       var name = body.match(/作品名　(.*)(\n|\r)/)[1];
       var member_ids = body.match(/会員認証済(\d+)/g);
